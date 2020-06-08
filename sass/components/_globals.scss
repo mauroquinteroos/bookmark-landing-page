@@ -1,18 +1,30 @@
-// Size Variables
+// css Variables
 :root{
   --ft-size: 18px;
 }
 
-// Color variables
+// sass variables
 $colors: (
   light: rgb(255, 255, 255),
-  soft-blue: hsl(231, 69%, 60%),
+  soft-blue: rgba(83, 104, 223, 1),
   dark-blue: hsl(229, 31%, 21%),
   light-blue: rgba(47, 53, 79, .9),
   soft-red: hsl(0, 94%, 66%),
   light-gray: #f7f7f7,
   gray-blue: hsl(229, 8%, 60%),
 );
+$sizes: (
+  h1-size: 2em,
+  h2-size: 1.5em,
+  p-size: .9em
+);
+$weights: (500, 400);
+$max-width: 75rem;
+$family: 'Rubik', sans-serif;
+// extends
+%display-tab {
+  display: block;
+}
 
 // Globals Styles
 *, *::before, *::after {
@@ -21,7 +33,7 @@ $colors: (
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Rubik', sans-serif;
+  font-family: $family;
   font-size: var(--ft-size);
 }
 ul {
@@ -32,20 +44,21 @@ li {
   list-style-type: none;
 }
 .u-wrapper {
+  max-width: $max-width;
   padding: 0 1em;
-  max-width: 75rem;
   margin: 0 auto;
 }
 .u-h1 {
-  font-size: 2em;
-  font-weight: 500;
+  font-size: map-get($sizes, h1-size);
+  font-weight: nth($weights, 1);
 }
 .u-h2 {
   @extend .u-h1;
-  font-size: 1.5em;
+  font-size: map-get($sizes, h2-size);
 }
 .u-text {
-  font-size: .9em;
+  font-size: map-get($sizes, p-size);
+  font-weight: nth($weights, 2);
   color: map-get($colors, gray-blue);
   line-height: 1.8;
 }
@@ -53,8 +66,9 @@ li {
   padding: 1em;
   background: map-get($colors, soft-blue);
   color: map-get($colors, light);
-  font-size: .9em;
-  font-weight: 500;
+  font-family: $family;
+  font-size: map-get($sizes, p-size);
+  font-weight: nth($weights, 1);
   border-radius: .5em;
   margin-left: .5em;
   border: none;
@@ -68,7 +82,11 @@ li {
     background: map-get($colors, light-gray);
     color: map-get($colors, gray-blue);
   }
+  &.is-fullWidth {
+    width: 100%;
+  }
 }
+// remove later
 .is-hidden {
   display: none!important;
 }

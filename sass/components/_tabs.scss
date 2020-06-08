@@ -38,28 +38,26 @@
   }
   input[id="bookmarking"]:checked {
     & ~ .tabs__grid #tab-bookmarking {
-      display: block;
+      @extend %display-tab;
     }
     & ~ ul label[for="bookmarking"]::after{
-      display: block;
+      @extend %display-tab;
     }
   }
   input[id="searching"]:checked {
     & ~ .tabs__grid #tab-searching {
-      display: block;
+      @extend %display-tab;
     }
     & ~ ul label[for="searching"]::after{
-      display: block;
+      @extend %display-tab;
     }
   }
   input[id="sharing"]:checked {
     & ~ .tabs__grid #tab-sharing {
-      display: block;
+      @extend %display-tab;
     }
     & ~ ul label[for="sharing"]::after{
-      display: block;
+      @extend %display-tab;
     }
   }
 }
-
-
