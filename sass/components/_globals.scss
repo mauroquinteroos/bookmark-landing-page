@@ -1,0 +1,30 @@
+// Size Variables
+:root{
+  --ft-size: 18px;
+}
+
+// Color variables
+$colors: (
+  blue: hsl(231, 69%, 60%),
+  red: hsl(0, 94%, 66%),
+  grayBlue: hsl(229, 8%, 60%),
+  darkBlue: hsl(229, 31%, 21%),
+  light-blue: rgba(47, 53, 79, .9),
+  light: rgb(255, 255, 255)
+);
+
+// Globals Styles
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+  font-size: var(--ft-size);
+}
+.u-wrapper {
+  padding: 0 1em;
+  max-width: 75rem;
+  margin: 0 auto;
+}

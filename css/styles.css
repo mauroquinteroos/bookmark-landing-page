@@ -1,0 +1,112 @@
+:root {
+  --ft-size: 18px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+  font-size: var(--ft-size);
+}
+
+.u-wrapper {
+  padding: 0 1em;
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.menu {
+  position: absolute;
+  z-index: 100;
+  top: 100%;
+  left: 0;
+  right: 0;
+  visibility: hidden;
+  opacity: 0;
+  background: rgba(47, 53, 79, 0.9);
+  transform: translateY(-100%);
+  transition: all 0.3s ease;
+}
+.menu ul {
+  padding: 0;
+}
+.menu li {
+  list-style-type: none;
+  border-top: 1px solid #9194a1;
+}
+.menu li:last-of-type a {
+  margin-top: 1em;
+  padding: 0.7em;
+  border-radius: 0.7em;
+  border: 0.125em solid white;
+}
+.menu a {
+  display: block;
+  text-align: center;
+  padding: 1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: white;
+}
+.menu__burger {
+  display: flex;
+  width: 2.5em;
+  height: 2.5em;
+  background: url("../../images/icon-hamburger.svg") center no-repeat;
+  cursor: pointer;
+  user-select: none;
+}
+.menu__checkbox {
+  display: none;
+}
+.menu__checkbox:checked ~ .header {
+  background: rgba(47, 53, 79, 0.9);
+}
+.menu__checkbox:checked ~ .header .menu__burger {
+  background: url("../../images/icon-close.svg") center no-repeat;
+}
+.menu__checkbox:checked ~ .header .header__logo {
+  background-image: url("../../images/logo-bookmark-white.svg");
+}
+.menu__checkbox:checked ~ .header .menu {
+  transform: translateY(0);
+  visibility: visible;
+  opacity: 1;
+}
+
+.header {
+  position: sticky;
+  z-index: 900;
+  top: 0;
+  left: 0;
+  padding: 1.5em 0;
+  background: white;
+  transition: 0.3s background ease;
+}
+.header__logo {
+  display: block;
+  width: 150px;
+  height: 45px;
+  background-image: url("../../images/logo-bookmark.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+  user-select: none;
+}
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero {
+  border: 1px solid red;
+}
+
+/*# sourceMappingURL=styles.css.map */

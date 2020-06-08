@@ -1,0 +1,27 @@
+@import './menu';
+
+.header {
+  position: sticky;
+  z-index: 900;
+  top: 0;
+  left: 0;
+  padding: 1.5em 0;
+  background: map-get($map: $colors, $key: light);
+  transition: .3s background ease;
+  &__logo {
+    display: block;
+    width: 150px;
+    height: 45px;
+    background-image: url('../../images/logo-bookmark.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+    user-select: none;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

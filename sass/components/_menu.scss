@@ -1,0 +1,64 @@
+.menu {
+  position: absolute;
+  z-index: 100;
+  top: 100%;
+  left: 0;
+  right: 0;
+  visibility: hidden;
+  opacity: 0;
+  background: map-get($map: $colors, $key: light-blue);
+  transform: translateY(-100%);
+  transition: all .3s ease;
+  ul {
+    padding: 0;
+  }
+  li {
+    list-style-type: none;
+    border-top: 1px solid map-get($map: $colors, $key: grayBlue);
+    &:last-of-type {
+      a {
+        margin-top: 1em;
+        padding: .7em;
+        border-radius: .7em;
+        border: 0.125em solid map-get($map: $colors, $key: light);
+      }
+    }
+  }
+  a {
+    display: block;
+    text-align: center;
+    padding: 1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: map-get($map: $colors, $key: light);
+  }
+  &__burger {
+    display: flex;
+    width: 2.5em;
+    height: 2.5em;
+    background: url('../../images/icon-hamburger.svg') center no-repeat;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &__checkbox {
+    display: none;
+    &:checked {
+      & ~ .header {
+        background: map-get($colors, light-blue);
+        .menu__burger {
+          background: url('../../images/icon-close.svg') center no-repeat;
+        }
+        .header__logo {
+          background-image: url('../../images/logo-bookmark-white.svg');
+        }
+        & .menu {
+          transform: translateY(0);
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
