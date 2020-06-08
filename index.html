@@ -28,16 +28,16 @@
             <div class="u-wrapper">
               <ul>
                 <li>
-                  <a href="">Features</a>
+                  <a href="#">Features</a>
                 </li>
                 <li>
-                  <a href="">Pricing</a>
+                  <a href="#">Pricing</a>
                 </li>
                 <li>
-                  <a href="">Contact</a>
+                  <a href="#">Contact</a>
                 </li>
                 <li>
-                  <a href="">Login</a>
+                  <a href="#">Login</a>
                 </li>
               </ul>
             </div>
@@ -46,17 +46,78 @@
       </div>
     </header>
     <section class="hero">
-      <h1>A Simple Bookmark Manager</h1>
-      <p>
-        A clean and simple interface to organize your favourite websites. Open a new
-        browser tab and see your sites load instantly. Try it for free.
-      </p>
-      <button>
-        Get it on Chrome
-      </button>
-      <button>
-        Get it on Firefox
-      </button>
+      <div class="u-wrapper">
+        <img class="hero__image" src="./images/illustration-hero.svg" alt="hero image">
+        <h1 class="u-h1">A Simple Bookmark Manager</h1>
+        <p class="u-text">
+          A clean and simple interface to organize your favourite websites. Open a new
+          browser tab and see your sites load instantly. Try it for free.
+        </p>
+        <div class="hero__buttons">
+          <button class="u-button">
+            Get it on Chrome
+          </button>
+          <button class="u-button is-gray">
+            Get it on Firefox
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="features">
+      <div class="u-wrapper">
+        <h2 class="u-h2">Features</h2>
+        <p class="u-text">
+          Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.
+        </p>
+        <div class="tabs">
+          <input type="radio" value="bookmarking" name="tabs" id="bookmarking" checked>
+          <input type="radio" value="searching" name="tabs" id="searching">
+          <input type="radio" value="sharing" name="tabs" id="sharing">
+          <ul>
+            <li class="tabs__link">
+              <label for="bookmarking">
+                Simple Bookmarking Speedy
+              </label>
+            </li>
+            <li class="tabs__link">
+              <label for="searching">
+                Speedy Searching
+              </label>
+            </li>
+            <li class="tabs__link">
+              <label for="sharing">
+                Easy Sharing
+              </label>
+            </li>
+          </ul>
+          <div class="tabs__grid">
+            <div class="tabs__content" id="tab-bookmarking">
+              <img src="./images/illustration-features-tab-1.svg" alt="first feature">
+              <h2 class="u-h2">Bookmark in one click</h2>
+              <p class="u-text">
+                Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.
+              </p>
+              <button class="u-button">more info</button>
+            </div>
+            <div class="tabs__content" id="tab-searching">
+              <img src="./images/illustration-features-tab-2.svg" alt="second feature">
+              <h2 class="u-h2">Intelligent search</h2>
+              <p class="u-text">
+                Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.
+              </p>
+              <button class="u-button">more info</button>
+            </div>
+            <div class="tabs__content" id="tab-sharing">
+              <img src="./images/illustration-features-tab-3.svg" alt="third feature">
+              <h2 class="u-h2">Share your bookmarks</h2>
+              <p class="u-text">
+                Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.
+              </p>
+              <button class="u-button">more info</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <div style="height: 1000px;"></div>
   </body>

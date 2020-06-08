@@ -1,3 +1,10 @@
 .hero {
-  border: 1px solid red;
+  padding: 4em 0;
+  text-align: center;
+  &__image {
+    max-width: 100%;
+  }
+  &__buttons {
+    padding-top: 1em;
+  }
 }

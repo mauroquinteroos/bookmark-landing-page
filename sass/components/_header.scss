@@ -5,8 +5,8 @@
   z-index: 900;
   top: 0;
   left: 0;
-  padding: 1.5em 0;
-  background: map-get($map: $colors, $key: light);
+  padding: 1em 0;
+  background: map-get($colors, light);
   transition: .3s background ease;
   &__logo {
     display: block;

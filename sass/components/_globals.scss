@@ -5,12 +5,13 @@
 
 // Color variables
 $colors: (
-  blue: hsl(231, 69%, 60%),
-  red: hsl(0, 94%, 66%),
-  grayBlue: hsl(229, 8%, 60%),
-  darkBlue: hsl(229, 31%, 21%),
+  light: rgb(255, 255, 255),
+  soft-blue: hsl(231, 69%, 60%),
+  dark-blue: hsl(229, 31%, 21%),
   light-blue: rgba(47, 53, 79, .9),
-  light: rgb(255, 255, 255)
+  soft-red: hsl(0, 94%, 66%),
+  light-gray: #f7f7f7,
+  gray-blue: hsl(229, 8%, 60%),
 );
 
 // Globals Styles
@@ -23,8 +24,51 @@ body {
   font-family: 'Rubik', sans-serif;
   font-size: var(--ft-size);
 }
+ul {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style-type: none;
+}
 .u-wrapper {
   padding: 0 1em;
   max-width: 75rem;
   margin: 0 auto;
+}
+.u-h1 {
+  font-size: 2em;
+  font-weight: 500;
+}
+.u-h2 {
+  @extend .u-h1;
+  font-size: 1.5em;
+}
+.u-text {
+  font-size: .9em;
+  color: map-get($colors, gray-blue);
+  line-height: 1.8;
+}
+.u-button {
+  padding: 1em;
+  background: map-get($colors, soft-blue);
+  color: map-get($colors, light);
+  font-size: .9em;
+  font-weight: 500;
+  border-radius: .5em;
+  margin-left: .5em;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 0.32rem 0.62rem -0.35rem map-get($colors, soft-blue);
+  &:first-of-type {
+    margin: 0;
+  }
+  &.is-gray {
+    background: map-get($colors, light-gray);
+    color: map-get($colors, gray-blue);
+  }
+}
+.is-hidden {
+  display: none!important;
 }
