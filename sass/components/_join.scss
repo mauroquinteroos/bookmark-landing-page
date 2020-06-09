@@ -1,0 +1,27 @@
+.join {
+  padding: 3em 0;
+  text-align: center;
+  color: map-get($colors, light);
+  background: map-get($colors, soft-blue);
+  small {
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+  }
+}
+.form {
+  &__input {
+    width: 100%;
+    margin-bottom: 1em;
+    padding: 1.2em;
+    font-size: map-get($sizes, p-size);
+    border-radius: 0.625rem;
+    border: none;
+    outline: none;
+    &::-webkit-input-placeholder {
+      color: map-get($colors, gray-blue);
+    }
+  }
+  .u-button {
+    margin: 0;
+  }
+}

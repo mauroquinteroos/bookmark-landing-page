@@ -1,0 +1,28 @@
+.footer {
+  background: map-get($colors, dark-blue);
+  padding: 3em 0;
+  text-align: center;
+  &__menu {
+    margin-top: 2em;
+    .u-link {
+      display: block;
+      padding: 1em;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: map-get($colors, soft-light);
+    }
+  }
+  &__social {
+    .u-link {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+    }
+    .i-twitter {
+      background: url('../../images/icon-twitter.svg') no-repeat center;
+    }
+    .i-facebook {
+      background: url('../../images/icon-facebook.svg') no-repeat center;
+    }
+  }
+}
