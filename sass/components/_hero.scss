@@ -7,4 +7,23 @@
   &__buttons {
     padding-top: 1em;
   }
+  @media screen and (min-width: 1024px) {
+    text-align: left;
+    padding: 1.5em 0;
+    &__grid {
+      display: grid;
+      align-items: center;
+      grid-template-columns: 28.5rem 1fr;
+      grid-template-areas: "hero-content hero-image";
+    }
+    &__image-container {
+      grid-area: hero-image;
+      position: relative;
+      top: 50px;
+      text-align: center;
+    }
+    &__content {
+      grid-area: hero-content;
+    }
+  }
 }

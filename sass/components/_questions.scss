@@ -1,6 +1,10 @@
 @import './carousel';
 
 .questions {
-  padding: 4em 0;
+  padding: 4em 0 8em;
   text-align: center;
+  .u-text {
+    max-width: 36.25rem;
+    margin: 0 auto;
+  }
 }

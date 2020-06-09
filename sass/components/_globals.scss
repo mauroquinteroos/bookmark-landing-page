@@ -37,6 +37,7 @@ $family: 'Rubik', sans-serif;
 body {
   margin: 0;
   padding: 0;
+  color: map-get($colors, dark-blue);
   font-family: $family;
   font-size: var(--ft-size);
 }

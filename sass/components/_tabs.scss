@@ -24,6 +24,7 @@
   }
   &__content {
     display: none;
+    flex-direction: column;
     img {
       max-width: 100%;
       object-fit: cover;
@@ -38,7 +39,7 @@
   }
   input[id="bookmarking"]:checked {
     & ~ .tabs__grid #tab-bookmarking {
-      @extend %display-tab;
+      display: flex;
     }
     & ~ ul label[for="bookmarking"]::after{
       @extend %display-tab;
@@ -46,7 +47,7 @@
   }
   input[id="searching"]:checked {
     & ~ .tabs__grid #tab-searching {
-      @extend %display-tab;
+      display: flex;
     }
     & ~ ul label[for="searching"]::after{
       @extend %display-tab;
@@ -54,10 +55,33 @@
   }
   input[id="sharing"]:checked {
     & ~ .tabs__grid #tab-sharing {
-      @extend %display-tab;
+      display: flex;
     }
     & ~ ul label[for="sharing"]::after{
       @extend %display-tab;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    border: none;
+    text-align: left;
+    ul {
+      display: flex;
+      justify-content: center;
+    }
+    label {
+      padding: 2em;
+      &::after{
+        width: 100%;
+        transform: translateX(0);
+      }
+    }
+    img {
+      margin-right: 5em;
+      margin-bottom: 0;
+    }
+    &__content {
+      flex-direction: row;
+      align-items: center;
     }
   }
 }
