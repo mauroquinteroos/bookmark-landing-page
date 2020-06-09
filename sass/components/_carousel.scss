@@ -1,0 +1,37 @@
+.carousel {
+  text-align: left;
+  margin: 2em 0;
+  &__content[open] {
+    .carousel__header {
+      border: none;
+    }
+    .arrow {
+      transform: rotateZ(180deg);
+    }
+  }
+  &__header {
+    padding: 1.5em 0;
+    border-bottom: 1px solid map-get($colors, soft-light);
+    font-size: map-get($sizes, p-size);
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+    &::-webkit-details-marker {
+      display: none;
+    }
+    .arrow {
+      display: block;
+      transform: rotateZ(0deg);
+      float: right;
+      width: 15px;
+      height: 15px;
+      background-image: url('../../images/icon-arrow.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      transform: rotateZ(0);
+      transition: transform .2s ease;
+    }
+  }
+}

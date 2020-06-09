@@ -32,13 +32,17 @@ li {
   margin: 0 auto;
 }
 
-.u-h1, .u-h2 {
-  font-size: 2em;
+.u-h1, .u-h3, .u-h2 {
+  font-size: 2rem;
   font-weight: 500;
 }
 
 .u-h2 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
+}
+
+.u-h3 {
+  font-size: 1.3rem;
 }
 
 .u-text {
@@ -245,6 +249,47 @@ li {
 .download__item .u-text {
   margin-top: 0.5em;
   margin-bottom: 4em;
+}
+
+.carousel {
+  text-align: left;
+  margin: 2em 0;
+}
+.carousel__content[open] .carousel__header {
+  border: none;
+}
+.carousel__content[open] .arrow {
+  transform: rotateZ(180deg);
+}
+.carousel__header {
+  padding: 1.5em 0;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+.carousel__header:focus {
+  outline: none;
+}
+.carousel__header::-webkit-details-marker {
+  display: none;
+}
+.carousel__header .arrow {
+  display: block;
+  transform: rotateZ(0deg);
+  float: right;
+  width: 15px;
+  height: 15px;
+  background-image: url("../../images/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transform: rotateZ(0);
+  transition: transform 0.2s ease;
+}
+
+.questions {
+  padding: 3em 0;
+  text-align: center;
 }
 
 /*# sourceMappingURL=styles.css.map */
