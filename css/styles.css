@@ -32,6 +32,11 @@ li {
   padding: 0 1em;
   margin: 0 auto;
 }
+@media screen and (min-width: 1024px) {
+  .u-wrapper {
+    padding: 0 2em;
+  }
+}
 
 .u-h1, .u-h4, .u-h3, .u-h2 {
   font-size: 2rem;
@@ -48,10 +53,13 @@ li {
 
 .u-h4 {
   font-size: 1.3em;
-  margin-top: 0.5em;
+  max-width: 28rem;
+  margin: 1em auto;
 }
 
 .u-text {
+  max-width: 36.25rem;
+  margin: 1em auto;
   font-size: 0.9em;
   font-weight: 400;
   color: #9194a1;
@@ -74,7 +82,7 @@ li {
   -webkit-appearance: none;
 }
 .u-button:first-of-type {
-  margin: 0;
+  margin-left: 0;
 }
 .u-button.is-gray {
   background: #f7f7f7;
@@ -91,10 +99,6 @@ li {
 .u-link {
   color: white;
   text-decoration: none;
-}
-
-.is-hidden {
-  display: none !important;
 }
 
 .menu {
@@ -229,6 +233,9 @@ li {
 .hero__buttons {
   padding-top: 1em;
 }
+.hero .u-button {
+  margin-bottom: 1em;
+}
 @media screen and (min-width: 1024px) {
   .hero {
     text-align: left;
@@ -282,7 +289,7 @@ li {
 }
 .tabs__content img {
   max-width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   margin-bottom: 1.5em;
 }
 .tabs__grid {
@@ -330,18 +337,12 @@ li {
   text-align: center;
   padding: 3em 0;
 }
-.features .u-text {
-  max-width: 36.25rem;
-  margin: 0 auto;
-}
 
 .download {
   text-align: center;
   padding: 3em 0;
 }
 .download .u-wrapper > .u-text {
-  max-width: 36.25rem;
-  margin: 0 auto;
   margin-bottom: 3.5em;
 }
 .download__grid {
@@ -426,10 +427,6 @@ li {
   padding: 4em 0 8em;
   text-align: center;
 }
-.questions .u-text {
-  max-width: 36.25rem;
-  margin: 0 auto;
-}
 
 .join {
   padding: 3em 0;
@@ -444,8 +441,6 @@ li {
 @media screen and (min-width: 1024px) {
   .join .u-h4 {
     font-size: 1.7em;
-    max-width: 28rem;
-    margin: 1em auto;
   }
 }
 

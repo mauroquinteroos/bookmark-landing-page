@@ -52,6 +52,9 @@ li {
   max-width: $max-width;
   padding: 0 1em;
   margin: 0 auto;
+  @media screen and (min-width: 1024px){
+    padding: 0 2em;
+  }
 }
 .u-h1 {
   font-size: map-get($sizes, h1-size);
@@ -68,9 +71,12 @@ li {
 .u-h4 {
   @extend .u-h1;
   font-size: map-get($sizes, h4-size);
-  margin-top: .5em;
+  max-width: 28rem;
+  margin: 1em auto;
 }
 .u-text {
+  max-width: 36.25rem;
+  margin: 1em auto;
   font-size: map-get($sizes, p-size);
   font-weight: nth($weights, 2);
   color: map-get($colors, gray-blue);
@@ -91,7 +97,7 @@ li {
   box-shadow: 0 0.32rem 0.62rem -0.35rem map-get($colors, soft-blue);
   -webkit-appearance: none;
   &:first-of-type {
-    margin: 0;
+    margin-left: 0;
   }
   &.is-gray {
     background: map-get($colors, light-gray);
@@ -108,8 +114,4 @@ li {
 .u-link {
   color: map-get($colors, light);
   text-decoration: none;
-}
-// remove later
-.is-hidden {
-  display: none!important;
 }
