@@ -42,6 +42,13 @@
     background: url('../../images/icon-hamburger.svg') center no-repeat;
     cursor: pointer;
     user-select: none;
+    border-radius: 0.62em;
+    &:focus {
+      border: 1px solid map-get($colors, soft-blue);
+    }
+    &:active {
+      border: 1px solid map-get($colors, soft-blue);
+    }
   }
   &__checkbox {
     display: none;

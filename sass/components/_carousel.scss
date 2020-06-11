@@ -17,6 +17,7 @@
     cursor: pointer;
     &:focus {
       outline: none;
+      border: 2px solid map-get($colors, focus);
     }
     &::-webkit-details-marker {
       display: none;

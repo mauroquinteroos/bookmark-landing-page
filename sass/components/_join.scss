@@ -27,6 +27,9 @@
     &::-webkit-input-placeholder {
       color: map-get($colors, gray-blue);
     }
+    &:focus {
+      border: 2px solid map-get($colors, dark-blue);
+    }
   }
   .u-button {
     margin: 0;

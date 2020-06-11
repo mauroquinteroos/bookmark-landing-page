@@ -95,6 +95,9 @@ li {
 .u-button.is-fullWidth {
   width: 100%;
 }
+.u-button:focus {
+  border: 2px solid #252b46;
+}
 
 .u-link {
   color: white;
@@ -144,6 +147,13 @@ li {
   background: url("../../images/icon-hamburger.svg") center no-repeat;
   cursor: pointer;
   user-select: none;
+  border-radius: 0.62em;
+}
+.menu__burger:focus {
+  border: 1px solid #5368df;
+}
+.menu__burger:active {
+  border: 1px solid #5368df;
 }
 .menu__checkbox {
   display: none;
@@ -208,7 +218,7 @@ li {
 }
 .header__logo {
   display: block;
-  width: 150px;
+  width: 160px;
   height: 45px;
   background-image: url("../../images/logo-bookmark.svg");
   background-repeat: no-repeat;
@@ -216,6 +226,7 @@ li {
   background-size: contain;
   cursor: pointer;
   user-select: none;
+  border-radius: 0.62em;
 }
 .header__content {
   display: flex;
@@ -400,6 +411,7 @@ li {
 }
 .carousel__header:focus {
   outline: none;
+  border: 2px solid #015fcc;
 }
 .carousel__header::-webkit-details-marker {
   display: none;
@@ -459,6 +471,9 @@ li {
 }
 .form__input::-webkit-input-placeholder {
   color: #9194a1;
+}
+.form__input:focus {
+  border: 2px solid #252b46;
 }
 .form .u-button {
   margin: 0;
